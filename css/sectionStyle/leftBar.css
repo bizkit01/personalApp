@@ -1,0 +1,144 @@
+#id_leftBar{
+  width:300px;
+  height: 100%;
+  background-color: #34495e;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  opacity: 0.7;
+  /*transition:all 5s;
+  -moz-transition:all 5s;
+  -webkit-transition:all 5s;
+  -o-transition:all 5s; */
+}
+
+.userArea{
+  width: 100%;
+  height: 100px;
+  margin: 5px 0px;
+  z-index: 1;
+}
+
+.userProfile{
+  width: 90px;
+  height: 90px;
+  float: right;
+  margin-top: 5px;
+  z-index: 1;
+}
+
+#userProfileImg{
+  border-radius: 20px;
+}
+
+.usernameArea{
+  width: 200px;
+  height: 100px;
+  float: right;
+  z-index: 1;
+}
+
+.nicknameContainer{
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+
+#id_nickname{
+  width: 100%;
+  margin-top: 10px;
+  color: white;
+  font-size: 30px;
+  margin-right: 10px;
+  z-index: 1;
+  text-align: center;
+}
+
+.login_outBtnContainer{
+  width: 80px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  z-index: 1;
+}
+
+#id_login_outBtn{
+  width: 100%;
+  height: 100px;
+  color: white;
+  font-size: 24px;
+  z-index: 1;
+}
+
+#id_login_outBtn:hover{
+  cursor: pointer;
+}
+
+.userOptArea{
+  width: 100%;
+  height: 100px;
+  margin: 5px 0px;
+  z-index: 1;
+  text-align: center;
+  padding-top: 35px;
+}
+
+.userOptBtn{
+  width: 100px;
+  margin: 0 20px;
+  color: #d35400;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.filterArea{
+  width: 100%;
+  height: 100px;
+  margin: 5px 0px;
+  z-index: 1;
+}
+
+.topicNav{
+  width: 300px;
+  z-index: 1;
+  /*position: absolute;
+  top: 200px;*/
+}
+
+#topicSingleTab{
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  z-index: 1;
+  color: white;
+  font-size: 18px;
+}
+
+#topicSingleTab:hover{
+  color: #34495e;
+  cursor: pointer;
+}
+
+#topicSingleTabHome{
+  width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  z-index: 1;
+  color: #d35400;
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+#topicSingleTabMain:hover{
+  color: #34495e;
+  cursor: pointer;
+}
+
+.topicSingleTab_id{
+  display: none;
+}

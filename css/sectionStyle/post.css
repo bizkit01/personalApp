@@ -1,0 +1,88 @@
+.postContainer{
+  width: 100%;
+  height: 80px;
+  background-color: #7f8c8d;
+  opacity: 0.9;
+  border-radius: 3px;
+  margin: 10px;
+}
+
+.postContainer:hover{
+  background-color: #95a5a6;
+}
+
+.post_topic{
+  width: 250px;
+  height: 70px;
+  float: left;
+  margin-top: 5px;
+  border-right: 2px solid #bdc3c7;
+  text-align: center;
+  /*background-color: red;*/
+}
+
+#id_post_topic{
+  height: 70px;
+  color: white;
+  font-size: 40px;
+}
+
+.post_cover{
+  width: 540px;
+  height: 80px;
+  float: left;
+  /*background-color: blue;*/
+  margin: 0 15px;
+}
+
+#id_post_id{
+  display: none;
+}
+
+.post_title{
+  width: 100%;
+  height: 50px;
+  /*background-color: yellow;*/
+}
+
+#id_post_title{
+  height: 40px;
+  color: white;
+  font-size: 24px;
+}
+
+.post_info{
+  width: 100%;
+  height: 30px;
+  /*background-color: purple;*/
+}
+
+#id_post_info{
+  height: 30px;
+  color: white;
+  font-size: 14px;
+}
+
+.post_opt{
+  width: 180px;
+  height: 70px;
+  float: right;
+  margin-top: 5px;
+  border-left: 2px solid #bdc3c7;
+  padding-left: 25px;
+  padding-top: 25px;
+  /*background-color: green;*/
+}
+
+.post_optBtn{
+  margin: 0 10px;
+}
+
+.post_optBtn:hover{
+  color: #ecf0f1;
+  cursor: pointer;
+}
+
+.post_optBtn:disabled{
+  cursor: not-allowed;
+}

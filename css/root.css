@@ -1,0 +1,66 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+}
+
+::-webkit-scrollbar
+{
+    width: 10px;
+    height: 16px;
+    background-color: #bdc3c7;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #bdc3c7;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #34495e;
+}
+
+#id_leftBarBtn{
+  position: absolute;
+  margin: 10px 10px;
+  z-index: 2;
+}
+
+#id_leftBarBtn:hover{
+  cursor: pointer;
+  color: #bdc3c7;
+}
+
+#id_rootContent{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  /*background: -moz-linear-gradient(#C4C4C4, #FFFFFF);
+  background: -webkit-linear-gradient(#C4C4C4, #FFFFFF);*/
+}
+
+#blackLayer{
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 3;
+  display: none;
+}

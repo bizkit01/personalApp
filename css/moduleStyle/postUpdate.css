@@ -1,0 +1,42 @@
+.postUpdatePage{
+  width: 100%;
+  height: 100%;
+}
+
+.postUpdateContainer{
+  width: 60%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#id_topicId{
+  display: none;
+}
+
+.postUpdateInputContainer{
+  width: 100%;
+  margin: 20px 0;
+}
+
+.postInfoNoUpt{
+  width: 100%;
+  height: 35px;
+  padding-left: 10px;
+  padding-top: 8px;
+  border-radius: 4px;
+  color: #7f8c8d;
+  background-color: #ecf0f1;
+}
+
+.postOptArea{
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#id_postUptBtn{
+  width: 80px;
+}

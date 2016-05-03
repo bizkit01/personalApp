@@ -1,0 +1,95 @@
+.userListContainer{
+  width: 60%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 50px;
+}
+
+#userContainer{
+  width: 300px;
+  height: 200px;
+  margin: 20px 20px;
+  float: left;
+  background-color: #7f8c8d;
+  border-radius: 3px;
+}
+
+#userContainer:hover{
+  cursor: pointer;
+  background-color: #95a5a6;
+}
+
+#id_userListUsername{
+  width: 100%;
+  height: 24px;
+  margin: 10px 20px;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+#id_userListNickname{
+  width: 100%;
+  height: 24px;
+  margin: 10px 20px;
+  color: white;
+  font-size: 20px;
+}
+
+#id_userListUserType{
+  width: 100%;
+  height: 24px;
+  margin: 10px 20px;
+  color: white;
+  font-size: 20px;
+}
+
+.userRoleContainer{
+  width: 100%;
+}
+
+#userRoleSelectorContainer{
+  width: 100%;
+  height: 70px;
+  margin-left: 10px;
+  margin-top: 30px;
+  border-bottom: 2px solid #bdc3c7;
+}
+
+#userRoleSelectGruopContainer{
+  width: 100%;
+  height: 40px;
+}
+
+#userRoleSelect{
+  width: 300px;
+  float: left;
+  margin: 0px 10px;
+  background-color: #7f8c8d;
+  border: 0 solid #7f8c8d;
+  box-shadow: none;
+  color: white;
+  font-size: 18px;
+  display: none;
+}
+
+#userRoleUptConfirmBtn{
+  float: left;
+  display: none;
+}
+
+.tips{
+  color: #d35400;
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+.userRoleUptBtnContainer{
+  width: 100%;
+  text-align: center;
+}
+
+#userRoleUptBtn{
+  margin-top: 15px;
+}

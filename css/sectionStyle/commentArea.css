@@ -1,0 +1,59 @@
+.postDetail_comment{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 2px solid #95a5a6;
+}
+
+.commentOptArea{
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  text-align: center;
+}
+
+#id_commentSubmitBtn{
+  width: 100px;
+}
+
+#id_commentClearBtn{
+  width: 100px;
+}
+
+#id_showCommentBtn{
+  cursor: pointer;
+}
+
+.commentList{
+  width: 100%;
+  height: 80px;
+  border-left: 8px solid #2980b9;
+  border-top: 2px solid #bdc3c7;
+  margin: 10px auto;
+  /*display: none;*/
+}
+
+.commentUser{
+  width: 120px;
+  height: 100%;
+  text-align: center;
+  border-right: 2px solid #bdc3c7;
+}
+
+#id_commentUser{
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;;
+  top: 25px;
+  font-size: 20px;
+}
+
+.commentContent{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  left: 130px;
+  top: -70px;
+  text-align: left;
+  font-size: 16px;
+}
