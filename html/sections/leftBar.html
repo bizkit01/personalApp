@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<div id="id_leftBar">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+  integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="css/sectionStyle/leftBar.css">
+    <!-- <img class="circle"> -->
+  <div class="userArea">
+    <div class="usernameArea">
+      <div class="nicknameContainer">
+        <div id="id_nickname">{{nickname}}</div>
+      </div>
+      <div class="login_outBtnContainer">
+        <a id="id_login_outBtn" ng-click="login_out()">{{loginBtn}}</a>
+      </div>
+    </div>
+    <div class="userProfile">
+      <!-- <img id="userProfileImg" src="http://rs714.pbsrc.com/albums/ww144/akatsuki18_bucket/akatsuki/Akatsuki-10-1.jpg~c200" width="90" height="90"> -->
+    </div>
+  </div>
+  <div class="userOptArea">
+    <input id="id_postBtn" class="btn btn-default userOptBtn" type="button" value="post" ng-disabled="postBtnDisabled" ng-click="post()">
+    <input id="id_userBtn" class="btn btn-default userOptBtn" type="button" value="user" ng-disabled="userMngBtnDisabled" ng-click="userManage()">
+  </div>
+  <!-- <div class="filterArea">
+  </div> -->
+  <div class="topicNavArea">
+    <ul class="nav nav-pills nav-stacked topicNav">
+      <li role="presentation" ng-click="showAllpost()">
+        <a id="topicSingleTabHome">
+          Home
+        </a>
+      </li>
+    </ul>
+    <ul class="nav nav-pills nav-stacked topicNav">
+      <li role="presentation" ng-repeat="topic in topics" ng-click="topicSelected_post(topic)">
+        <a id="topicSingleTab">
+          <span class="topicSingleTab_id">
+            {{topic.topicid}}
+          </span>
+          {{topic.topicname}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="postContainer" ng-repeat="post in posts">
+  <head>
+    <link rel="stylesheet" href="css/sectionStyle/post.css">
+  </head>
+  <div class="post_topic">
+    <span id="id_post_topic">{{post.topicname}}<span>
+  </div>
+  <div class="post_cover">
+    <div class="post_title">
+      <span id="id_post_title">{{post.posttitle}}<span>
+    </div>
+    <div class="post_info">
+    <span id="id_post_info">posted by: {{post.nickname}}<span>
+      <span id="id_post_info">&nbsp&nbsp&nbspposted at: {{post.posttime}}<span>
+    </div>
+  </div>
+  <div class="post_opt" ng-controller="postOperationController">
+    <i id="id_post_detail" class="glyphicon glyphicon-file post_optBtn" style="font-size: 20px" ng-click="showPostDetail(post)"></i>
+    <i id="id_post_update" class="glyphicon glyphicon-edit post_optBtn" style="font-size: 20px" ng-click="updatePost(post)"></i>
+    <i id="id_post_delete" class="glyphicon glyphicon-remove post_optBtn" style="font-size: 20px" ng-click="deletePost(post)"></i>
+  </div>
+</div>

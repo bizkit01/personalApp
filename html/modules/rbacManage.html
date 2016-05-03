@@ -1,0 +1,30 @@
+<div class="userListContainer">
+  <div id="userRoleSelectorContainer">
+    <div id="userRoleSelectGruopContainer">
+      <select id="userRoleSelect" class="form-control">
+        <option disabled selected value value="">select</option>
+        <option value="normal">normal</option>
+        <option value="author">author</option>
+        <option value="moderator">moderator</option>
+        <option value="admin">administrator</option>
+      </select>
+      <input id="userRoleUptConfirmBtn" class="btn btn-primary" type="button" value="confirm" ng-click="confirm()">
+    </div>
+    <div class="tips">{{tips}}</div>
+  </div>
+
+  <head>
+    <link rel="stylesheet" href="css/moduleStyle/rbacMgr.css">
+  </head>
+  <div id="userContainer" ng-repeat="user in users">
+    <!-- <div class="col-md-6"> -->
+    <div id="id_userListUsername">user name: {{user.username}}</div>
+    <div id="id_userListNickname">nick name: {{user.nickname}}</div>
+    <!-- </div> -->
+    <!-- <div class="col-md-6"></div> -->
+    <div id="id_userListUserType">user role: {{user.usertype}}</div>
+    <div class="userRoleUptBtnContainer">
+      <input id="userRoleUptBtn"class="btn btn-default" style="color: #d35400" type="button" value="update" ng-click="update(user.userid)">
+    </div>
+  </div>
+</div>

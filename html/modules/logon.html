@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<div>
+
+<head>
+    <link rel="stylesheet" href="css/public.css">
+    <link rel="stylesheet" href="css/moduleStyle/user.css">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="54760805865-nvab2513hplo2le736e6b8563b66ae7b.apps.googleusercontent.com">
+    <!-- these two scripts are both denpendended by goggle oauth button and service,must be loaded
+         before the oauthBtn, and every time back to this page, these two script have to be reloaded,
+         otherwise the goole oauth button would not show.  -->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="js/controllers/oauthController.js"></script>
+</head>
+
+<div class="mainArea">
+  <div class="container">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 inputArea">
+      <h1 class="title">login or register</h1>
+      <div class="loginContainer">
+        <div class="input-group input">
+          <span class="input-group-addon" id="basic-addon1">username</span>
+          <input type="text" id="usernameInput" class="form-control" placeholder="input username" aria-describedby="basic-addon1" maxlength="25">
+        </div>
+        </br>
+        <div class="input-group">
+          <span class="input-group-addon">&nbsppassword</span>
+          <input type="password" id="pwdInput" class="form-control" placeholder="input password" aria-describedby="basic-addon1" maxlength="18">
+        </div>
+        </br>
+        <div class="input-group">
+          <span class="input-group-addon">&nbsppassword</span>
+          <input type="password" id="pwdConfirm" class="form-control" placeholder="confirm password" aria-describedby="basic-addon1" maxlength="18">
+        </div>
+        </br>
+        <div class="input-group">
+          <span class="input-group-addon">&nbspnickname</span>
+          <input type="text" id="nicknameInput" class="form-control" placeholder="input nickname" aria-describedby="basic-addon1" maxlength="10">
+        </div>
+        </br>
+        <select id="userTypeSelect" class="form-control">
+            <option disabled selected value>user type</option>
+            <option value="normal">normal</option>
+            <option disabled selected value>others need apply from moderator or administrator</option>
+        </select>
+        <div class="tips">
+          <p id="tips"></p>
+        </div>
+        <div>
+          <input id="logonBtn_logon" class="btn btn-primary btn-lg" type="button" value="signup" ng-click="register()">
+          <input id="oauthBtn_logon" class="btn btn-default btn-lg" type="button" value="oAuth">
+          <input id="loginBtn_logon" class="btn btn-primary btn-lg" type="button" value="signin" ng-click="register()">
+        </div>
+        <div id="oauthContainer">
+          <div id="oauthBtn" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+
+</div>

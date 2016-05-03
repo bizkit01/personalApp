@@ -1,0 +1,28 @@
+<div class="postUpdatePage">
+  <link rel="stylesheet" href="css/moduleStyle/postUpdate.css">
+  <div class="postUpdateContainer">
+    <div class="postUpdateInputContainer">
+      <div class="input-group">
+        <span class="input-group-addon">title</span>
+        <input type="title" id="postTitleInput" class="form-control" placeholder="title" aria-describedby="basic-addon1"
+        ng-model="postTitle">
+      </div>
+    </div>
+    <div class="postInfoNoUpt">
+        posted by: {{postDetailUpt.nickname}}&nbsp&nbsp&nbsp&nbspposted at: {{postDetailUpt.posttime}}
+    </div>
+    <div class="postUpdateInputContainer">
+      <select id="userTypeSelect" class="form-control" ng-model="postTopicId" ng-click="click()">
+          <option value="">select topic</option>
+          <option ng-repeat="topic in topics" value="{{topic.topicid}}">{{topic.topicname}}</option>
+      </select>
+    </div>
+    <div class="postUpdateInputContainer">
+      <textarea id="id_postContent" class="form-control" rows="34" placeholder="content" ng-model="postContent"></textarea>
+    </div>
+    <div class="postOptArea">
+      <input id="id_postUptBtn" class="btn btn-primary btn-lg" type="update" value="post" ng-click="update()">
+      <input id="id_postClearBtn" class="btn btn-default btn-lg" type="button" value="clear" ng-click="clear()">
+    </div>
+  </div>
+</div>

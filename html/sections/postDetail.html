@@ -1,0 +1,16 @@
+<div id="postDetail" ng-controller="postDetailController">
+  <link rel="stylesheet" href="css/sectionStyle/postDetail.css">
+  <div class="postDetail_opt">
+    <i class="glyphicon glyphicon-remove closeBtn" style="font-size: 20px"
+    ng-click="close()"></i>
+  </div>
+  <div class="postDetailContainer">
+    <div class="postDetail_title"></div>
+    <div class="postDetail_info">
+    posted by: <span id="postDetail_author"></span>&nbsp&nbsp&nbsp&nbsp
+    posted at: <span id="postDetail_time"></span>
+    </div>
+    <div class="postDetail_content"></div>
+    <div comment-Area></div>
+  </div>
+</div>
