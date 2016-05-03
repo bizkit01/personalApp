@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="54760805865-nvab2513hplo2le736e6b8563b66ae7b.apps.googleusercontent.com">
+    <link rel="stylesheet" href="css/root.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"></script>
+    <!-- jQuery lib should be at the before of the bootstrap -->
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script src="js/config/rootAppConfig.js"></script>
+    <script src="js/controllers/indexController.js"></script>
+    <script src="js/controllers/loginController.js"></script>
+    <script src="js/controllers/logonController.js"></script>
+    <script src="js/controllers/oauthController.js"></script>
+    <script src="js/controllers/pull_postController.js"></script>
+    <script src="js/controllers/postDetailController.js"></script>
+    <script src="js/controllers/postPushController.js"></script>
+    <script src="js/controllers/postUpdateController.js"></script>
+    <script src="js/controllers/commentAreaController.js"></script>
+    <script src="js/controllers/rbacManageController.js"></script>
+
+    <title>Web Security Project</title>
+  </head>
+  <body ng-app="rootApp" ng-init="loginStatue='0'" ng-controller="rootController">
+      <div ng-controller="leftBarController">
+        <i id="id_leftBarBtn" class="glyphicon glyphicon-th-large" style="font-size: 30px"></i>
+        <div left-bar></div>
+      </div>
+      <div id="id_rootContent" ng-view></div>
+      <div post-detail></div>
+      <div id="blackLayer">
+      </div>
+  </body>
+</html>
