@@ -30,9 +30,13 @@
            $('#id_leftBar').toggle(200);
         });
 
+         $scope.topicAddBtnHide = true;
+         $scope.topicOptBtnHide = true;
          var nickname = "rabbit";
          var loginStatue = "logouted";
          var userRole = "";
+         var topicId = "";
+         var addUptConfirmFlag = "";
 
         $scope.init = function(){
           $.ajax({
@@ -100,24 +104,28 @@
                 // set user login statue
                 if(loginStatue == "logined"){
 
-                  userId = localStorage.getItem("userId");
+                  var userId = localStorage.getItem("userId");
                   userRole = localStorage.getItem("userRole");
+                  $scope.accountBtnDisabled = false;
 
                   $scope.loginBtn = "signout";
                   if(userRole == "admin"){
                     $scope.postBtnDisabled = false;
                     $scope.userMngBtnDisabled = false;
+                    $scope.topicBtnDisabled = false;
                   }else if(userRole == "moderator"){
                     $scope.postBtnDisabled = true;
                     $scope.userMngBtnDisabled = false;
+                    $scope.topicBtnDisabled = false;
                   }else if(userRole == "author"){
                     $scope.postBtnDisabled = false;
                     $scope.userMngBtnDisabled = true;
+                    $scope.topicBtnDisabled = true;
                   }else if(userRole == "normal"){
                     $scope.postBtnDisabled = true;
                     $scope.userMngBtnDisabled = true;
+                    $scope.topicBtnDisabled = true;
                   }
-
 
 
                 }
@@ -128,6 +136,9 @@
                   localStorage.setItem("userRole","");
                   $scope.postBtnDisabled = true;
                   $scope.userMngBtnDisabled = true;
+                  $scope.topicBtnDisabled = true;
+                  $scope.topicOptBtnHide = true;
+                  $scope.accountBtnDisabled = true;
                 }
               }
               else{
@@ -137,6 +148,9 @@
                 localStorage.setItem("userRole","");
                 $scope.postBtnDisabled = true;
                 $scope.userMngBtnDisabled = true;
+                $scope.topicBtnDisabled = true;
+                $scope.topicOptBtnHide = true;
+                $scope.accountBtnDisabled = true;
               }
             }
           });
@@ -182,7 +196,14 @@
           $location.path("html/modules/rbacManage.html");
         }
 
+        $scope.topicManage = function(){
+          $scope.topicAddBtnHide = !$scope.topicAddBtnHide;
+          $scope.topicOptBtnHide = !$scope.topicOptBtnHide;
+        }
 
+        $scope.accountManage = function(){
+          alert("abandon temporarily");
+        }
 
         $scope.topicSelected_post = function(topic){
 
@@ -191,6 +212,89 @@
           $location.path("html/modules/topic_post.html");
           location.reload();
         };
+
+       $scope.addTopic = function(){
+         $scope.topicAddUptInputHide = !$scope.topicAddUptInputHide;
+         $scope.topicName = "";
+         $("#id_topicAddUptInput").attr("placeholder","add topic");
+         addUptConfirmFlag = "addTopic";
+       }
+
+        $scope.updateTopic = function(topic){
+          topicId = topic.topicid;
+          $scope.topicName = topic.topicname;
+          $scope.topicAddUptInputHide = !$scope.topicAddUptInputHide;
+          addUptConfirmFlag = "updateTopic";
+        }
+
+        $scope.inputConfirm = function(){
+          var topicName = $scope.topicName;
+          var userId = localStorage.getItem("userId");
+
+          if(addUptConfirmFlag == "addTopic"){
+            $.ajax({
+              url: "php/topicAccess.php",
+              type: "POST",
+              dataType: "json",
+              data: {
+                "reqType":"addTopic",
+                "topicName":topicName,
+                "topicType":"1",
+                "userId":userId
+              },
+              success: function(result){
+                if(result == "csucceed"){
+                    alert("add topic succeed");
+                    location.reload();
+                }else if(result == "cerror"){
+                  alert("add topic error");
+                }
+              }
+            });
+          }else if(addUptConfirmFlag == "updateTopic"){
+            $.ajax({
+              url: "php/topicAccess.php",
+              type: "POST",
+              dataType: "json",
+              data: {
+                "reqType":"updateTopic",
+                "topicId":topicId,
+                "topicName":topicName,
+                "topicType":"1",
+                "userId":userId
+              },
+              success: function(result){
+                if(result == "usucceed"){
+                    alert("update topic succeed");
+                    location.reload();
+                }else if(result == "uerror"){
+                  alert("update topic error");
+                }
+              }
+            });
+          }
+
+        }
+
+        $scope.deleteTopic = function(topic){
+          var topicId = topic.topicid;
+
+          $.ajax({
+            url: "php/topicAccess.php",
+            type: "POST",
+            dataType: "json",
+            data: {"reqType":"deleteTopic","topicId":topicId},
+            success: function(result){
+              if(result == "dsucceed"){
+                  alert("delete topic succeed");
+                  location.reload();
+              }else if(result == "derror"){
+                alert("delete topic error");
+              }
+            }
+          });
+
+        }
 
         $scope.showAllpost = function(){
           $location.path("/");

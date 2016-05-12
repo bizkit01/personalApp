@@ -23,6 +23,8 @@
   <div class="userOptArea">
     <input id="id_postBtn" class="btn btn-default userOptBtn" type="button" value="post" ng-disabled="postBtnDisabled" ng-click="post()">
     <input id="id_userBtn" class="btn btn-default userOptBtn" type="button" value="user" ng-disabled="userMngBtnDisabled" ng-click="userManage()">
+    <input id="id_topicBtn" class="btn btn-default userOptBtn" type="button" value="topic" ng-disabled="topicBtnDisabled" ng-click="topicManage()">
+    <input id="id_accountBtn" class="btn btn-default userOptBtn" type="button" value="account" ng-disabled="accountBtnDisabled" ng-click="accountManage()">
   </div>
   <!-- <div class="filterArea">
   </div> -->
@@ -34,9 +36,20 @@
         </a>
       </li>
     </ul>
+    <i id="id_topic_addBtn" class="glyphicon glyphicon-plus" style="font-size: 20px"
+    ng-click="addTopic()" ng-hide="topicAddBtnHide"></i>
+    <div ng-hide="topicAddUptInputHide">
+      <input id="id_topicAddUptInput" type="text" class="form-control" aria-describedby="basic-addon1"
+      ng-init="topicAddUptInputHide=true" ng-model="topicName">
+      <i id="id_topicInputConfirmBtn" class="glyphicon glyphicon-ok" type="button" value="confirm" ng-click="inputConfirm()"></i>
+    </div>
     <ul class="nav nav-pills nav-stacked topicNav">
       <li role="presentation" ng-repeat="topic in topics" ng-click="topicSelected_post(topic)">
         <a id="topicSingleTab">
+          <i id="id_topic_delete" class="glyphicon glyphicon-trash topic_optBtn" style="font-size: 20px"
+          ng-click="deleteTopic(topic);$event.stopPropagation()" ng-hide="topicOptBtnHide"></i>
+            <i id="id_topic_update" class="glyphicon glyphicon-edit topic_optBtn" style="font-size: 20px"
+            ng-click="updateTopic(topic);$event.stopPropagation()" ng-hide="topicOptBtnHide"></i>
           <span class="topicSingleTab_id">
             {{topic.topicid}}
           </span>
