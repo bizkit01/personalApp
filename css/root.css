@@ -63,4 +63,5 @@ html,body{
   opacity: 0.8;
   z-index: 3;
   display: none;
+  position: absolute;
 }
